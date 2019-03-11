@@ -28,6 +28,10 @@
     <td>Adapter</td>
     <td>Adapter Controller WS2812 Module (ESP–01)</td>
   </tr>
+  <tr>
+    <td>oder</td>
+    <td>Wemos Mini D1</td>
+  </tr>
 </table>
 
 <br>

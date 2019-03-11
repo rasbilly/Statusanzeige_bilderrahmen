@@ -1,0 +1,59 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="on_ext" id="Bnn:#ZJ|,rD?i,bg|@X=" x="63" y="63">
+    <mutation items="1"></mutation>
+    <field name="CONDITION">ne</field>
+    <field name="ACK_CONDITION"></field>
+    <value name="OID0">
+      <shadow type="field_oid" id="Z}1?2heZNEHqqcGy[0#(">
+        <field name="oid">default</field>
+      </shadow>
+    </value>
+    <statement name="STATEMENT">
+      <block type="controls_if" id="2_S9CRq^Nkrgs-5KE6]B">
+        <value name="IF0">
+          <block type="logic_compare" id="aiZ+w]M6F=,3*86/;hrk">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block type="get_value" id="?nW9IV!jV_#,?,c+Z4_X">
+                <field name="ATTR">val</field>
+                <field name="OID">ID auswählen</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="logic_boolean" id="qGeY8lT3/2eA+I_vi60L">
+                <field name="BOOL">TRUE</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO0">
+          <block type="control" id="+:c-zx;brwR#O{3_c~4E">
+            <mutation delay_input="false"></mutation>
+            <field name="OID">mqtt.0.statusanzeige_bilderrahmen.powerAll</field>
+            <field name="WITH_DELAY">FALSE</field>
+            <value name="VALUE">
+              <block type="text" id="0k~v{RI;G.?;q2o:2]B?">
+                <field name="TEXT">true</field>
+              </block>
+            </value>
+            <next>
+              <block type="control" id="s=pOLeJ|P0_icju.nz1C">
+                <mutation delay_input="true"></mutation>
+                <field name="OID">mqtt.0.statusanzeige_bilderrahmen.powerAll</field>
+                <field name="WITH_DELAY">TRUE</field>
+                <field name="DELAY_MS">5</field>
+                <field name="UNIT">min</field>
+                <field name="CLEAR_RUNNING">FALSE</field>
+                <value name="VALUE">
+                  <block type="text" id="AIOY#{4NrX{k8(KpxaxQ">
+                    <field name="TEXT">false</field>
+                  </block>
+                </value>
+              </block>
+            </next>
+          </block>
+        </statement>
+      </block>
+    </statement>
+  </block>
+</xml>
