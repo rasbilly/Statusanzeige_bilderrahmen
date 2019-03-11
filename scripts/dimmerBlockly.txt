@@ -1,0 +1,41 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="comment" id="BMspr.(1vzWpo82];FU5" x="38" y="38">
+    <field name="COMMENT">Dimmer für Tag und Nachtmodus</field>
+    <next>
+      <block type="astro" id="McF.OW4Ls0iF]?V*lY1h">
+        <field name="TYPE">sunriseEnd</field>
+        <field name="OFFSET">0</field>
+        <statement name="STATEMENT">
+          <block type="control" id="@_0k80@r99-u!wBHjrHM">
+            <mutation delay_input="false"></mutation>
+            <field name="OID">Object ID</field>
+            <field name="WITH_DELAY">FALSE</field>
+            <value name="VALUE">
+              <block type="text" id="nA1nj1?XBxDu.IPS~arm">
+                <field name="TEXT">50</field>
+              </block>
+            </value>
+          </block>
+        </statement>
+        <next>
+          <block type="astro" id="ApkYu^NS.Pbu){`K7Q7/">
+            <field name="TYPE">dusk</field>
+            <field name="OFFSET">0</field>
+            <statement name="STATEMENT">
+              <block type="control" id="9u3gMhc2OHan}Dn}9|Rj">
+                <mutation delay_input="false"></mutation>
+                <field name="OID">Object ID</field>
+                <field name="WITH_DELAY">FALSE</field>
+                <value name="VALUE">
+                  <block type="text" id="mB[VFwSgM1^QN}~~^]|f">
+                    <field name="TEXT">30</field>
+                  </block>
+                </value>
+              </block>
+            </statement>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>
